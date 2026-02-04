@@ -1,0 +1,40 @@
+{
+  "name": "@grod56/placeholder",
+  "version": "1.0.2",
+  "description": "Utility for generating base64 placeholders for Next Images",
+  "license": "MIT",
+  "author": "grod56",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "files": [
+	"dist/**/*"
+  ],
+  "exports": {
+	".": {
+		"import": "./dist/index.mjs",
+		"types": "./dist/index.d.ts",
+		"require": "./dist/index.cjs"
+	}
+  },
+  "scripts": {
+	"clean": "del-cli ./dist",
+	"build": "npm run clean && rollup -c",
+	"prepack": "npm run build"
+  },
+  "devDependencies": {
+	"del-cli": "^6.0.0",
+	"rollup": "^4.40.2",
+	"rollup-plugin-delete": "^3.0.1",
+	"rollup-plugin-dts": "^6.2.1",
+	"rollup-plugin-sourcemaps": "^0.6.3",
+	"@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^25.0.9",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@plaiceholder/next": "^3.0.0",
+    "plaiceholder": "^3.0.0"
+  }
+}
