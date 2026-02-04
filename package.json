@@ -1,6 +1,6 @@
 {
   "name": "@grod56/placeholder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility for generating base64 placeholders for Next Images",
   "license": "MIT",
   "author": "grod56",
